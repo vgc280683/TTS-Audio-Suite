@@ -59,7 +59,7 @@ class StatelessHiggsAudioWrapper:
         return self._wrapped_engine.get_available_models()
     
     def initialize_engine(self, 
-                         model_path: str = "bosonai/higgs-audio-v2-generation-3B-base",
+                         model_path: str = "/kaggle/input/higgs-audio/other/default/1/higgs-audio-v2-generation-3B-base",
                          tokenizer_path: str = "bosonai/higgs-audio-v2-tokenizer", 
                          device: str = "auto",
                          enable_cuda_graphs: bool = True) -> None:
