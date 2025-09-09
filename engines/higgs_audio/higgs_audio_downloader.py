@@ -20,7 +20,7 @@ import folder_paths
 # Higgs Audio model configurations
 HIGGS_AUDIO_MODELS = {
     "higgs-audio-v2-3B": {
-        "generation_repo": "bosonai/higgs-audio-v2-generation-3B-base",
+        "generation_repo": "/kaggle/input/higgs-audio/other/default/1/higgs-audio-v2-generation-3B-base",
         "tokenizer_repo": "bosonai/higgs-audio-v2-tokenizer",
         "description": "Higgs Audio v2 3B parameter model with audio tokenizer",
         "generation_files": [
