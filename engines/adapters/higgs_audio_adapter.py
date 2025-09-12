@@ -92,7 +92,7 @@ class HiggsAudioEngineAdapter:
             tokenizer_model = model_config["tokenizer_repo"]
         else:
             # Default fallback
-            generation_model = "bosonai/higgs-audio-v2-generation-3B-base"
+            generation_model = "/kaggle/input/higgs-audio-v2-w4a16-g128/other/default/1/higgs-audio-v2-W4A16-G128"
             tokenizer_model = "bosonai/higgs-audio-v2-tokenizer"
         
         # Initialize the Higgs Audio engine with CUDA Graph setting

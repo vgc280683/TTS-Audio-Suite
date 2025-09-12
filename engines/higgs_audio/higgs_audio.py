@@ -53,7 +53,7 @@ from utils.models.unified_model_interface import load_tts_model
 # Higgs Audio model configurations (matches downloader format)
 HIGGS_AUDIO_MODELS = {
     "higgs-audio-v2-3B": {
-        "generation_repo": "bosonai/higgs-audio-v2-generation-3B-base",
+        "generation_repo": "/kaggle/input/higgs-audio-v2-w4a16-g128/other/default/1/higgs-audio-v2-W4A16-G128",
         "tokenizer_repo": "bosonai/higgs-audio-v2-tokenizer",
         "description": "Higgs Audio v2 3B parameter model"
     }
@@ -94,7 +94,7 @@ class HiggsAudioEngine:
         return self.downloader.get_available_models()
     
     def initialize_engine(self, 
-                         model_path: str = "bosonai/higgs-audio-v2-generation-3B-base",
+                         model_path: str = "/kaggle/input/higgs-audio-v2-w4a16-g128/other/default/1/higgs-audio-v2-W4A16-G128",
                          tokenizer_path: str = "bosonai/higgs-audio-v2-tokenizer",
                          device: str = "auto",
                          enable_cuda_graphs: bool = True) -> None:
