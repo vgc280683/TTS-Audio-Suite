@@ -52,7 +52,7 @@ from utils.models.unified_model_interface import load_tts_model
 
 # Higgs Audio model configurations (matches downloader format)
 HIGGS_AUDIO_MODELS = {
-    "higgs-audio-v2-3B": {
+    "higgs-audio-v2-W4A16-G128": {
         "generation_repo": "/kaggle/input/higgs-audio-v2-w4a16-g128/other/default/1/higgs-audio-v2-W4A16-G128",
         "tokenizer_repo": "bosonai/higgs-audio-v2-tokenizer",
         "description": "Higgs Audio v2 3B parameter model"

@@ -113,7 +113,7 @@ messages.append(Message(role="assistant", content=[audio_content]))
 **Organized Download Structure:**
 ```
 ComfyUI/models/TTS/HiggsAudio/
-└── higgs-audio-v2-3B/
+└── higgs-audio-v2-W4A16-G128/
     ├── generation/
     │   ├── config.json
     │   ├── model.safetensors
@@ -159,7 +159,7 @@ cache_data = {
 ### Engine Configuration Node
 
 **`HiggsAudioEngineNode` Parameters:**
-- `model`: Model selection (higgs-audio-v2-3B, local models)
+- `model`: Model selection (higgs-audio-v2-W4A16-G128, local models)
 - `device`: Device selection (auto, cuda, cpu)
 - `voice_preset`: Voice preset selection (8 presets + voice_clone)
 - `audio_priority`: Voice source priority logic

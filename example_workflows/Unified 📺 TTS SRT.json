@@ -1041,7 +1041,7 @@
         }
       },
       "widgets_values": [
-        "higgs-audio-v2-3B",
+        "higgs-audio-v2-W4A16-G128",
         "auto",
         "Custom Character Switching",
         "Generate audio following instruction.",

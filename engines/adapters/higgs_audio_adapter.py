@@ -50,10 +50,10 @@ class HiggsAudioEngineAdapter:
         supported_languages = ['en', 'zh', 'zh-cn']  # Add more as confirmed
         
         if lang_code.lower() in supported_languages:
-            return "higgs-audio-v2-3B"
+            return "higgs-audio-v2-W4A16-G128"
         else:
             print(f"⚠️ Language '{lang_code}' not specifically tested with Higgs Audio, using default model")
-            return "higgs-audio-v2-3B"
+            return "higgs-audio-v2-W4A16-G128"
     
     def load_base_model(self, model_name: str, device: str, enable_cuda_graphs: bool = True):
         """
@@ -136,7 +136,7 @@ class HiggsAudioEngineAdapter:
             Generated audio tensor
         """
         # Ensure engine is initialized with current model/device
-        model = params.get("model", "higgs-audio-v2-3B")
+        model = params.get("model", "higgs-audio-v2-W4A16-G128")
         device = params.get("device", "auto")
         enable_cuda_graphs = params.get("enable_cuda_graphs", True)  # Get CUDA Graph setting
         self.load_base_model(model, device, enable_cuda_graphs)
@@ -153,7 +153,7 @@ class HiggsAudioEngineAdapter:
         enable_cuda_graphs = params.get("enable_cuda_graphs", True)  # CUDA Graph toggle
         seed = params.get("seed", -1)
         enable_cache = params.get("enable_audio_cache", True)
-        model_name = params.get("model", "higgs-audio-v2-3B")
+        model_name = params.get("model", "higgs-audio-v2-W4A16-G128")
         device = params.get("device", "auto")
         
         # Native multi-speaker mode parameters

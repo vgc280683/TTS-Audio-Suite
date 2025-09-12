@@ -19,16 +19,14 @@ import folder_paths
 
 # Higgs Audio model configurations
 HIGGS_AUDIO_MODELS = {
-    "higgs-audio-v2-3B": {
+    "higgs-audio-v2-W4A16-G128": {
         "generation_repo": "/kaggle/input/higgs-audio-v2-w4a16-g128/other/default/1/higgs-audio-v2-W4A16-G128",
         "tokenizer_repo": "bosonai/higgs-audio-v2-tokenizer",
-        "description": "Higgs Audio v2 3B parameter model with audio tokenizer",
+        "description": "higgs-audio-v2-W4A16-G128",
         "generation_files": [
             {"remote": "config.json", "local": "config.json"},
             {"remote": "model.safetensors.index.json", "local": "model.safetensors.index.json"},
-            {"remote": "model-00001-of-00003.safetensors", "local": "model-00001-of-00003.safetensors"},
-            {"remote": "model-00002-of-00003.safetensors", "local": "model-00002-of-00003.safetensors"},
-            {"remote": "model-00003-of-00003.safetensors", "local": "model-00003-of-00003.safetensors"},
+            {"remote": "model.safetensors", "local": "model.safetensors"},
             {"remote": "generation_config.json", "local": "generation_config.json"},
             # Add tokenizer files to model directory
             {"remote": "tokenizer.json", "local": "tokenizer.json"},
@@ -360,7 +358,7 @@ class HiggsAudioDownloader:
         Download both generation and tokenizer models for a predefined model
         
         Args:
-            model_name: Name of predefined model (e.g., "higgs-audio-v2-3B")
+            model_name: Name of predefined model (e.g., "higgs-audio-v2-W4A16-G128")
             
         Returns:
             Tuple of (generation_path, tokenizer_path)

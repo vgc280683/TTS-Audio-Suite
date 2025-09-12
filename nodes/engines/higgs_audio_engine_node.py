@@ -58,14 +58,14 @@ class HiggsAudioEngineNode(BaseTTSNode):
             # Combine and deduplicate
             available_models.extend([m for m in all_models if m not in available_models])
         except ImportError:
-            available_models = ["higgs-audio-v2-3B"]
+            available_models = ["higgs-audio-v2-W4A16-G128"]
         
         
         return {
             "required": {
                 "model": (available_models, {
-                    "default": "higgs-audio-v2-3B",
-                    "tooltip": "Higgs Audio 2 model selection:\n• higgs-audio-v2-3B: Main 3B parameter model with best quality and voice cloning capabilities\n• Future models will appear here when available\n\nThe model handles voice cloning, multi-speaker generation, and natural speech synthesis."
+                    "default": "higgs-audio-v2-W4A16-G128",
+                    "tooltip": "Higgs Audio 2 model selection:\n• higgs-audio-v2-W4A16-G128: Main 3B parameter model with best quality and voice cloning capabilities\n• Future models will appear here when available\n\nThe model handles voice cloning, multi-speaker generation, and natural speech synthesis."
                 }),
                 "device": (["auto", "cuda", "cpu"], {
                     "default": "auto",
